@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personne>
+    <dateNaissance>
+        <annee>2001</annee>
+        <jour>19</jour>
+        <mois>01</mois>
+    </dateNaissance>
+    <nom>SANON</nom>
+    <prenom>Wilfried</prenom>
+</personne>
