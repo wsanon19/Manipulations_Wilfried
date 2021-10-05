@@ -4,7 +4,7 @@ public class deploiement {
 
     public static void main(String[] args) {
 
-        String url = "http://localhost:8787/";
+        String url = "http://localhost:8686/";
         Endpoint.publish(url, new monServiceTest() );
 
         System.out.println("WSDL accessible a l'adrese " + url + "?wsdl" );

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="www.polyschool.fr" xmlns:tns="www.polyschool.fr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="average" type="tns:average"/>
+
+  <xs:element name="averageResponse" type="tns:averageResponse"/>
+
+  <xs:complexType name="average">
+    <xs:sequence>
+      <xs:element name="math" type="xs:double"/>
+      <xs:element name="Pc" type="xs:double"/>
+      <xs:element name="SVT" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="averageResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:double"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
