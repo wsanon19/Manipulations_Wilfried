@@ -13,8 +13,9 @@ public class Democm8octobre2021Application {
     public static void main(String[] args) {
         SpringApplication.run(Democm8octobre2021Application.class, args);
     }
-@Bean
-    CommandLineRunner runner(ProduitInterface produitInterface){
+
+@Bean //demande d'executer la classe
+    CommandLineRunner runner(ProduitInterface produitInterface){  //fonction lamda
         return args -> {
           produitInterface.save(new Produit(1,"Tablette",500));
           produitInterface.save(new Produit(2,"Switch",200));
@@ -22,7 +23,7 @@ public class Democm8octobre2021Application {
           produitInterface.save(new Produit(4,"Ethernet",50));
 
           produitInterface.findAll().forEach(produit -> {
-              System.out.println(produit.getDesignation());
+              System.out.println(produit.toString());
           });
         };
 
