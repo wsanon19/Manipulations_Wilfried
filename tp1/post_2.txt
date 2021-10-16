@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Mon, 04 Oct 2021 15:59:12 GMT
+Server: Apache/ProXad [Jan 23 2019 20:05:46]
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Pragma: no-cache
+X-Powered-By: PHP/4.4.3-dev
+Set-Cookie: PHPSESSID=e4c95436796ebbecb717ef1c30619865; path=/
+Connection: close
+Content-Type: text/html
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TP HTTP</title>
+</head>
+
+<body>
+
+Bonjour toi!
+  <form action="TPHTTP.php" method="POST">
+    <label for="nom">Nom:</label>
+    <input type="text" name="nom" id="nom">
+    <button type="submit" name="submit" value="ok">Submit</button>
+  </form>
+ 
+Contenu de la variable POST:</br>Array
+(
+)
+ 
+</body>
+
+</html>
