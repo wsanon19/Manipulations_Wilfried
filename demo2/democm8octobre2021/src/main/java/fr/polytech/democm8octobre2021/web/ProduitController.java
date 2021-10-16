@@ -27,7 +27,8 @@ public class ProduitController {
     public List<Produit> produitList(){
         return produitInterface.findAll();
     }
-//la classe optionnellle pour tout ce qui est generecite en java 8
+
+    //la classe optionnellle pour tout ce qui est generecite en java 8
     @Path("/produits/{identifiant}")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
@@ -41,5 +42,26 @@ public class ProduitController {
     public Produit save(Produit produit){ // Quand on utilise Post pour ajputer un elemeent dan la BD on la renvoie
         return produitInterface.save(produit);
     }
+
+    @Path("/produits/{identifiant}")
+    @PUT
+    @Produces({MediaType.APPLICATION_JSON})
+    public Produit Updateproduit(Produit produit,@PathParam(value="identifiant") int identifiant){
+        produit.setIdentifiant(identifiant);
+        return produitInterface.save(produit);      // Surement va falloir modifier soit coté POST soit cote PUT
+    }
+
+
+    @Path("/produits/{identifiant}")
+    @DELETE
+    @Produces({MediaType.APPLICATION_JSON})
+    public String deleteProduit (@PathParam(value="identifiant") int identifiant){
+        Produit pr =  produitInterface.findById(identifiant).get();
+        produitInterface.delete(pr);
+        return pr.getDesignation() + " a bien été supprimé";
+    }
+
+
+
 
 }
