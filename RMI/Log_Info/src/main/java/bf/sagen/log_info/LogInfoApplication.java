@@ -17,9 +17,9 @@ public class LogInfoApplication {
     CommandLineRunner runner(ICamions iCamions){
 
         return args -> {
-            iCamions.save(new CamionsImpl(1000,"Mercedes-Benz",true));
-            iCamions.save(new CamionsImpl(1001,"Dacia",true));
-            iCamions.save(new CamionsImpl(1002,"Renault",true));
+            iCamions.save(new CamionsImpl(1003,"Tesla ",true));
+            iCamions.save(new CamionsImpl(1004,"Acura",true));
+            iCamions.save(new CamionsImpl(1005,"Porshe",true));
 
             iCamions.findAll().forEach(camionsImpl -> {
                 System.out.println(camionsImpl.toString());
