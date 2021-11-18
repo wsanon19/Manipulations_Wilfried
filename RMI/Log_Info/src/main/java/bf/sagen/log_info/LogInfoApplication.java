@@ -1,6 +1,6 @@
 package bf.sagen.log_info;
 
-import bf.sagen.log_info.dao.CamionsImpl;
+import bf.sagen.log_info.entities.CamionsImpl;
 import bf.sagen.log_info.dao.ICamions;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,9 +17,9 @@ public class LogInfoApplication {
     CommandLineRunner runner(ICamions iCamions){
 
         return args -> {
-            iCamions.save(new CamionsImpl(1003,"Tesla ",true));
-            iCamions.save(new CamionsImpl(1004,"Acura",true));
-            iCamions.save(new CamionsImpl(1005,"Porshe",true));
+            iCamions.save(new CamionsImpl("Tesla ",true,"Citerne"));
+            iCamions.save(new CamionsImpl("Acura",true,"Benne"));
+            iCamions.save(new CamionsImpl("Porshe",true,"Benne"));
 
             iCamions.findAll().forEach(camionsImpl -> {
                 System.out.println(camionsImpl.toString());
