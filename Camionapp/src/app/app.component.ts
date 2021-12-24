@@ -12,6 +12,7 @@ import { CamionService } from './service/camion.service';
 })
 export class AppComponent implements OnInit {
   appState$ : Observable<AppState<CustomResponse>>;
+  readonly DataState = DataState;
 
   constructor(private camionService: CamionService) {
     this.appState$ = this.camionService.camions$.pipe(

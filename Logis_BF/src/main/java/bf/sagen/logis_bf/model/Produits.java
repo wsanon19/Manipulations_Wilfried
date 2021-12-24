@@ -25,5 +25,6 @@ public class Produits {
     private double prix_kilo;
 
     @OneToMany (mappedBy = "prod")
-    private List<Camions> camions  = new ArrayList<>();;
+    private List<Camions> camions  = new ArrayList<>();
+
 }

@@ -34,8 +34,17 @@ public class Camions {
     @OneToMany(mappedBy = "camions")
     private List<Courses> courses = new ArrayList<>();
 
+    public void setCourses(Courses course) {
+        this.courses.add(course);
+    }
+
     @OneToMany
     private  List<Trajet> traj  = new ArrayList<>();
+
+
+    public void setTraj(List<Trajet> traj) {
+        this.traj = traj;
+    }
 
     @ManyToOne
     private Users prop;

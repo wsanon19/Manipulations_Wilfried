@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import static java.lang.Boolean.TRUE;
 import static org.springframework.http.HttpStatus.OK;
@@ -60,7 +61,8 @@ public class CamionsRessource {
 
 
     @GetMapping("/list")
-    public ResponseEntity<Response> getCamions(){
+    public ResponseEntity<Response> getCamions() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(3);
         Map<String, List<Camions>> myMap1 = new HashMap<String, List<Camions>>() {{
             put("camions", iCamions.findAll());
         }};

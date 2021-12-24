@@ -1,0 +1,3 @@
+FROM openjdk
+RUN
+EXPOSE 80

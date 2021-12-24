@@ -7,7 +7,7 @@ import { CustomResponse } from '../interface/custom-response';
 
 @Injectable({providedIn: 'root'})
 export class CamionService {
-  private readonly apiUrl = 'any';
+  private readonly apiUrl = 'http://localhost:9292';
 
   constructor(private http: HttpClient) { }
 

@@ -23,6 +23,11 @@ public class Courses {
     private LocalDate date ;
     private int distance_tot;
 
+    public Courses(double prix, int distance_tot) {
+        this.prix = prix;
+        this.distance_tot = distance_tot;
+    }
+
     @ManyToOne
     private Camions camions;
 

@@ -56,18 +56,18 @@ public class CamionsController {
         }
         iCamions.deleteById(CamionsID);
     }
-    static final Map<?, ?> MY_MAP = new ImmutableMultivaluedMap<>();
-
-
-    public ResponseEntity<Response> getCamions(){
-        return ResponseEntity.ok(
-                Response.builder()
-                        .timeStamp(LocalDateTime.now())
-                        .data(Map.ofEntries)
-                        .message("Camions retrieved")
-                        .status(OK)
-                        .statusCode(OK.value())
-                        .build()
-         );
-    }
+//    static final Map<?, ?> MY_MAP = new ImmutableMultivaluedMap<>();
+//
+//
+//    public ResponseEntity<Response> getCamions(){
+//        return ResponseEntity.ok(
+//                Response.builder()
+//                        .timeStamp(LocalDateTime.now())
+//                        .data(Map.ofEntries)
+//                        .message("Camions retrieved")
+//                        .status(OK)
+//                        .statusCode(OK.value())
+//                        .build()
+//         );
+//    }
 }
